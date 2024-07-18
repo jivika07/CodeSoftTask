@@ -1,0 +1,36 @@
+import java.util.*;
+public class StudentGradeCalc {
+
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        int Sum=0;
+        System.out.println("Enter Number Of Subjects:");
+        int sub=sc.nextInt();
+        for (int i=1;i<=sub;i++){
+            System.out.print("Enter marks obtained in "+i+"th subject :");
+            float marks=sc.nextFloat();
+            Sum+=marks;
+        }
+        double averagePer = (double)Sum/sub;
+        char Grade;
+        if(averagePer>=85)
+            Grade='A';
+        else if(averagePer>=75)
+            Grade='B';
+        else if (averagePer>=65)
+            Grade='C';
+        else if (averagePer>=55)
+            Grade='D';
+        else if (averagePer>=45)
+            Grade='E';
+        else
+            Grade='F';
+        System.out.println("Total Marks Obtained ="+Sum);
+        System.out.println("Average Percentage Gained ="+averagePer+"%");
+        System.out.println("Grade = "+Grade );
+
+
+
+    } 
+    
+}
